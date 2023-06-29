@@ -1,0 +1,12 @@
+import express from "express";
+import { registerController } from "../controllers/registerController.js";
+import { loginController } from "../controllers/loginController.js";
+import { forgotController } from "../controllers/forgotController.js";
+import { resetController } from "../controllers/resetController.js";
+import { supportController } from "../controllers/supportController.js";
+export const router = express.Router();
+router.post("/register", registerController);
+router.post("/login", loginController);
+router.post("/forgot-password", forgotController);
+router.put("/reset-password", resetController);
+router.post("/support", supportController);
